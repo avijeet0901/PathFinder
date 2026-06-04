@@ -14,6 +14,7 @@ pip3 install numpy
 ```
 # Usage
 The help options can be printed with the -h option. The code requires the following input
+
 python PathFinder.py \
   -f energy.dat \
   -end [0.67,15.3] [2.5,21.9] \
@@ -25,15 +26,23 @@ python PathFinder.py \
   --prefix 2D_Z_MEP
 
 -f energy.dat is the energy matrix on a 2D grid of points. The missing data is interpolated.
+
 -end takes the input of fixed endpoints
+
 -path takes input of waypoints. If not provided, the initial guess is just a linear path between the endpoints.
+
 --n-points are the number of points used to define the path
+
 --n-iter is the attempt number of iterations
+
 --dt is the steps used in the steepest descent minimization
+
 --smooth is used for Gaussian smoothing of data
+
 --prefix is used to dave output with this prefix
 
 NOTE: A demo energy file has been added to the repository, along with the known MFEP and the code's output. Use the following command to run this test case,
+
 python PathFinder.py -f energy.dat -end [-2.5,2.92] [1.23,-1.22] -path [-1.53,1.54] [-1.19,-0.66] --n-points 80 --dt 0.005
 
 # Citations
